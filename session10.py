@@ -71,7 +71,7 @@ def named_tuple_cal(named_tuple_list):
         blood_group.append(i.blood_type)
     result = statistics.mode(blood_group),(np.mean(lan),np.mean(lon)),np.max(age),np.mean(age)
     t1 = datetime.datetime.now()
-    print(f'Time taken for claculation{t1-t0}')
+    # print(f'Time taken for claculation{t1-t0}')
     return result , t1-t0
 
 def dict_cal(dict_list):
@@ -79,8 +79,8 @@ def dict_cal(dict_list):
     This function calculates and returns the largest blood type, mean-current_location,
      oldest_person_age ,average age and time taken for calculation using Dictionary.
     '''
-    t0 = datetime.datetime.now()
-    lan = []
+    t2 = datetime.datetime.now()
+    lan = [] 
     lon = []
     age = []
     blood_group = []
@@ -90,9 +90,9 @@ def dict_cal(dict_list):
         age.append(calculateAge(i['DOB']))
         blood_group.append(i['blood_type'])
     result = statistics.mode(blood_group), (np.mean(lan),np.mean(lon)),np.max(age),np.mean(age)
-    t1 = datetime.datetime.now()
-    print(f'Time taken for claculation{t1-t0}')
-    return result,t1-t0
+    t3 = datetime.datetime.now()
+    # print(f'Time taken for claculation{t3-t2}')
+    return result,t3-t2
 
 def get_symbol(com_name,i):
     """
